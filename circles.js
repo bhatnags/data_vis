@@ -80,7 +80,7 @@ group.append("rect")
       if (i<2 || i==3 || i==5){
          return start + i*gap - circle_radius;
       } else {
-         return start - 5*circle_radius;
+         return start - 6*circle_radius;
       }
    })      
    .attr("y", function(d, i) {
@@ -89,9 +89,9 @@ group.append("rect")
       } else if (i==3 || i==5){
          return start + (5-i)*gap - 4*circle_radius;
       } else if (i==2){ 
-         return start + (4-1*i)*gap - 12*circle_radius;
+         return start + (4-1*i)*gap - 10*circle_radius;
       } else if (i==4){ // 2 and 4
-      return start + (4-1*i)*gap - 2*circle_radius;
+      return start + (4-1*i)*gap - 4*circle_radius;
    }
 })
    .attr("width", rect_width)
