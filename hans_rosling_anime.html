@@ -1,43 +1,34 @@
 <!DOCTYPE html>
-<html lang = "en">
-   <head>
-      <title>learn_anime</title>
-      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
-      <script src="https://unpkg.com/d3-simple-slider"></script>
-      <style>
-         body { font-family: Arial; }
-      </style>
-   </head>
+<head>
+  <meta charset="utf-8">
+  <script type = "text/javascript" src = "https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js" charset="utf-8"></script>
+  <style>
+    html {
+		background-color: lightgray;
+	}
+	#rangeSlider{
+		width: 700px
+	}
+  </style>
+</head>
 
-   <body>
-      <div class="row align-items-center">
-         <div class="col-sm-2"><p id="value-time"></p></div>
-         <div class="col-sm"><div id="slider-time"></div></div>
-       </div>
-      <div id = "svgcontainer"></div>
-
-      <script language = "javascript" src="controllables.js">
-      </script>
-      <script language = "javascript" src="arrows.js">
-      </script>
-
-      <script language = "javascript" src="slider_playbutton.js">
-      </script>
-
-<!--
-      <script d3.csv("....", function(data){})></script>
-      <script language = "javascript" src="junctions.js">
-      </script>
+<body>
+		<div id="slider">
+			<input type='range' min='0' max='20' step='1' value='0' id='rangeSlider'/> 
+			<button type="button" id="start">start</button>
+			<button type="button" id="stop">stop</button>
+			<!--<script language = "javascript" src="slider_playbutton.js"></script>
+			<script language = "javascript" src="controllables.js"></script>
+			<script language = "javascript" src="arrows.js"></script>-->
+		</div>
+		<div id = "svgcontainer" width="1500" height="1000">
+			<script language = "javascript" src="slider_playbutton.js"></script>
+	
+		<div id="rectangles"> 
+		</div>
+	</div>
 
 
-<script src="https://d3js.org/d3-polygon.v1.min.js"></script>
-<script>
+</body>
 
-var points = "05,30 15,10 25,30";
-var hull = d3.polygonHull(points);
-
-</script>
--->
-      </div>
-   </body>
-</html>
